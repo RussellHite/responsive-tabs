@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "c872602e1a3359ae0957";
+/******/ 	var hotCurrentHash = "ac06629acc310a118077";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1636,12 +1636,12 @@ var ResponsiveTabs = /*#__PURE__*/function (_Component) {
 
   var _super = _createSuper(ResponsiveTabs);
 
-  function ResponsiveTabs() {
+  function ResponsiveTabs(props) {
     var _this;
 
     _classCallCheck(this, ResponsiveTabs);
 
-    _this = _super.call(this);
+    _this = _super.call(this, props);
     _this.state = {
       active: false
     };
@@ -1808,9 +1808,8 @@ var TabTitle = /*#__PURE__*/function (_Component) {
   _createClass(TabTitle, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("li", {
-        className: "tab-pane mx-tabcontainer-pane"
-      }, /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", null, this.props.tabTitle));
+      // eslint-disable-next-line prettier/prettier
+      return /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createElement"])("a", null, this.props.tabTitle);
     }
   }]);
 

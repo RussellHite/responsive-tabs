@@ -12,8 +12,8 @@ const classes = {
 };
 
 class ResponsiveTabs extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             active: false
         };
@@ -36,7 +36,7 @@ class ResponsiveTabs extends Component {
     render() {
         const components = this.props.tabs;
         const stateStyle = this.state.active ? classes.active : classes.inactive;
-        const tabTitleItem = components.map(function(title, index) {
+        var tabTitleItem = components.map(function(title, index) {
             var ste = index === 0 ? "tab-active" : "";
             var i = index;
             return (
