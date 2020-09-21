@@ -1,11 +1,9 @@
+//import classnames from "classnames";
 import { Component, createElement } from "react";
 import { hot } from "react-hot-loader/root";
-import classnames from "classnames";
-
-import { Tab } from "./components/tab";
 import { TabTitle } from "./components/tabTitle";
+import { Tab } from "./components/tab";
 import "./ui/ResponsiveTabs.css";
-
 class ResponsiveTabs extends Component {
     constructor(props) {
         super(props);
@@ -14,7 +12,7 @@ class ResponsiveTabs extends Component {
         };
         this.select = this.select.bind(this);
     }
-    select(newTab) {
+    select(event, newTab) {
         // logic to determine to replace or add to ActiveTabs
         // window.viewport.something
         this.setState({ active: [newTab] });
@@ -54,7 +52,7 @@ class ResponsiveTabs extends Component {
             //     </li>
             // );
         });
-
+        // eslint-disable-next-line arrow-body-style
         const tabContentItem = components.map((content, index) => {
             return <Tab key={index} isActive={this.state.active.indexOf(index) > -1} content={content} />;
             // var contentState = index === 0 ? "tab-active" : "";
@@ -64,14 +62,12 @@ class ResponsiveTabs extends Component {
             //     </div>
             // );
         });
-
         return (
-            <div>
-                <ul>{tabTitleItem}</ul>
-                <div>{tabContentItem}</div>
+            <div className="responsive-tabs">
+                <ul className="tabcontainer-tabs">{tabTitleItem}</ul>
+                <div className="mx-tabcontainer-content">{tabContentItem}</div>
             </div>
         );
     }
 }
-
 export default hot(ResponsiveTabs);

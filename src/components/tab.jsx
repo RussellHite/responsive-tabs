@@ -1,15 +1,10 @@
 import { Component, createElement } from "react";
-
 export class Tab extends Component {
     render() {
         return this.props.isActive ? (
-            <div className="pane-active">
-                <div className="tab-pane mx-tabcontainer-pane">{this.props.tabContent}</div>
-            </div>
+            <div className="tab-pane pane-active">{this.props.content.tabContent}</div>
         ) : (
-            <div className="pane-active">
-                <div className="tab-pane mx-tabcontainer-pane">{this.props.tabContent}</div>
-            </div>
+            <div className="tab-pane">{this.props.content.tabContent}</div>
         );
     }
 }
