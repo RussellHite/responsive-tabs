@@ -25,6 +25,10 @@
                     </propertyGroup>
                 </properties>
             </property>
+            <property key="tabsWindowSize" type="integer" defaultValue="1280">
+                <caption>Mobile Screen Size</caption>
+                <description>The minimum window size for desktop rendering, in pixels. Anything below will result in the mobile view.</description>
+            </property>
         </propertyGroup>
     </properties>
 </widget>

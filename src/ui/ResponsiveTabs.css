@@ -11,11 +11,14 @@ Place your custom CSS here
     margin: 0;
 }
 
+
+
 .responsive-tabs .tabcontainer-tabs>li>a {
     margin-right: 0;
-    font-weight: 300;
+    font-weight: 400;
     background-color: #f0f0f0;
     font-size: 18px;
+    line-height: 24px;
     border: none;
     border-top: none;
     border-right: 1px solid #CBCBCB;
@@ -24,6 +27,7 @@ Place your custom CSS here
     max-width: 180px;
     padding: 16px 40px;
     cursor: pointer;
+    color: #666666;
 }
 
 .responsive-tabs .tabcontainer-tabs>li>a:hover,
@@ -56,4 +60,37 @@ Place your custom CSS here
 
 .mx-tabcontainer-content .tab-pane.pane-active {
     display: block;
+}
+
+/* Mobile styles */
+.responsive-tabs.mobile ul.tabcontainer-tabs {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    padding: 0;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+.responsive-tabs.mobile .tabcontainer-tabs>li {
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+.responsive-tabs.mobile .tabcontainer-tabs>li.tab-active>a,
+.responsive-tabs.mobile .tabcontainer-tabs>li.tab-active>a:hover,
+.responsive-tabs.mobile .tabcontainer-tabs>li.tab-active>a:focus {
+    border-right: none;
+    border-bottom: 1px solid #CBCBCB;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: unset;
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #333333;
+    font-weight: 400;
 }
